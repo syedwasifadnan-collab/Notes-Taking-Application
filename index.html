@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notes Taking Application</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>My Notes</h1>
+            <p>Write and manage your personal notes</p>
+        </header>
+
+        <section class="note-form">
+
+            <h2 id="formHeading">Create a New Note</h2>
+
+            <form id="noteForm">
+
+                <input
+                    type="text"
+                    id="noteTitle"
+                    placeholder="Enter note title"
+                    required
+                >
+
+                <textarea
+                    id="noteContent"
+                    placeholder="Write your note here..."
+                    required
+                ></textarea>
+
+                <div class="form-buttons">
+
+                    <button type="submit" id="saveBtn">
+                        Save Note
+                    </button>
+
+                    <button type="button" id="cancelBtn" hidden>
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <section class="notes-section">
+
+            <div class="section-heading">
+                <h2>Saved Notes</h2>
+                <span id="noteCount">0 Notes</span>
+            </div>
+
+            <div id="notesList" class="notes-list"></div>
+
+        </section>
+
+    </div>
+
+    <script src="renderer.js"></script>
+
+</body>
+</html>
